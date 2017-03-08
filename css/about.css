@@ -1,0 +1,10 @@
+.profileImage {
+    height: 200px;
+}
+
+.profileImage img {
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: 0 auto;
+}
