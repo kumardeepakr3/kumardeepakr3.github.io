@@ -51,6 +51,50 @@
       #mooc td {
         width: 50%;
       }
+      .tgl input[type=checkbox] {
+          box-sizing: border-box;
+          visibility: hidden;
+          height: inherit;
+          display: none;
+      }
+      label.tggl {
+          box-sizing: border-box;
+          display: flex;
+          width: 48px;
+          height: 23px;
+          border: 4px solid;
+          border-radius: 99em;
+          position: relative;
+          transition: transform 0.75s ease-in-out;
+          transform-origin: 50% 50%;
+          cursor: pointer;
+      }
+      label.tggl:before {
+          transition: transform 0.75s ease;
+          transition-delay: 0.5s;
+          content: "";
+          display: block;
+          position: absolute;
+          width: 11px;
+          height: 11px;
+          background-color: #000;
+          border-radius: 50%;
+          top: 2px;
+          left: 3px;
+      }
+      .tgl input[type=checkbox]:checked + label {
+          transform: rotate(360deg);
+          background-color: #000;
+      }
+      .tgl input[type=checkbox]:checked + label:before {
+          box-sizing: border-box;
+          transform: translateX(24px);
+          background-color: #fff;
+      }
+      .hidden {
+        display:none;
+        transition: 1.2s;
+      }
     </style>
 
     <title>Deepak Kumar</title>
@@ -61,6 +105,19 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-97059392-1');
+    </script>
+    <script>
+      function extracurricularClick(checkbox) {
+        var acads = document.querySelectorAll(".acads");
+        var extra = document.querySelectorAll(".extra");
+        if (checkbox.checked == true) {
+            acads.forEach(x => x.classList.add("hidden"));
+            extra.forEach(x => x.classList.remove("hidden"));
+        } else {
+            acads.forEach(x => x.classList.remove("hidden"));
+            extra.forEach(x => x.classList.add("hidden"));
+        }
+      }
     </script>
 
     <meta name="Deepak Kumar&#39;s Github Homepage" http-equiv="Content-Type" content="Deepak Kumar&#39;s Github Homepage">
@@ -92,35 +149,45 @@
               <tbody>
                 <tr>
                   <td width="67%" valign="middle" align="justify">
-                    <p>I am a Software Engineer at <a href="https://www.microsoft.com/en-in">Microsoft</a> currently working on <a href="https://www.microsoft.com/en-us/edge">Edge</a> browser logging for <a href="https://www.bing.com/">Bing</a> feature enhancement, at Search Technology Center India, Hyderabad.
-                       Before this I worked on <a href="https://www.bing.com/flights?src=HYD&des=NYC&ddate=2021-02-05&isr=1&rdate=2021-02-10&sel=0&cls=0&adult=1&child=0&infant=0&serp=1&setlang=en&setmkt=en-us">flight booking experience on Bing</a>. The experience is shipped in 200 different regions and languages.
-                    <p>I had also interned at Microsoft in Summer 2015 working on leverageing <a href="https://www.openstreetmap.org/">Openstreetmap</a> for Bing Maps after which I was offered a full time role at Microsoft. Prior to this I graduated from <a href="http://www.iitk.ac.in/">IIT Kanpur</a> in 2016 with Bachelors in Computer Science and Engineering. I did most of the projects under <a href="http://www.cse.iitk.ac.in/users/vinaypn/">Prof. Vinay Namboodiri</a> on computer vision. During my time here I also volunteered for NGO <a href="http://www.bloodconnect.org/kanpur-team-2014-15">BloodConnect</a> with a mission to tackle the blood shortage in Kanpur.</p>
+                    <p class="acads">I am a Software Engineer at <a href="https://www.microsoft.com/en-in">Microsoft</a> currently working on <a href="https://www.microsoft.com/en-us/edge">Edge</a> browser logging for <a href="https://www.bing.com/">Bing</a> feature enhancement, at Search Technology Center India, Hyderabad.
+                       Before this I worked on <a href="https://www.bing.com/flights?src=HYD&des=NYC&ddate=2021-02-05&isr=1&rdate=2021-02-10&sel=0&cls=0&adult=1&child=0&infant=0&serp=1&setlang=en&setmkt=en-us">flight booking experience on Bing</a>. The experience is shipped in 200 different regions and languages.</p>
+                    <p class="acads">I had also interned at Microsoft in Summer 2015 working on leverageing <a href="https://www.openstreetmap.org/">Openstreetmap</a> for Bing Maps after which I was offered a full time role at Microsoft. Prior to this I graduated from <a href="http://www.iitk.ac.in/">IIT Kanpur</a> in 2016 with Bachelors in Computer Science and Engineering. I did most of the projects under <a href="http://www.cse.iitk.ac.in/users/vinaypn/">Prof. Vinay Namboodiri</a> on computer vision. During my time here I also volunteered for NGO <a href="http://www.bloodconnect.org/kanpur-team-2014-15">BloodConnect</a> with a mission to tackle the blood shortage in Kanpur.</p>
+                    <p class="extra hidden">I have plethora of active hobbies that keep me busy post my daily work as a software engineer. I indulge in activities that involve learning & creating and that help widening my skillset. So watching tv series / movies is something I try to avoid.</p>
+                    <p class="extra hidden">I enjoy playing variety of sports especially outdoors. I think I'm good at football and complete novice at badminton, volleyball, basketball, swimming, bowling, pool. I also used to run regularly in the past, but have switched to strength & conditioning and dance fitness at Cult.Fit. Thanks to lockdowns, I was able to hone my photography. I also tried out a few musical instruments and learnt a bit of music theory. Again, I'm just a beginner in all these.</p>
+                    <p class="extra hidden"> </p>
+                    
                   </td>
                   <td width="33%">
-                    <img src="./src/images/dp.jpg" width="90%">
-                    <p align="center">
+                    <img class="acads" src="./src/images/dp.jpg" width="90%">
+                    <img class="extra hidden" src="./src/images/dp.jpg" width="90%">
+                    <p align="center" class="acads">
                       <a href="https://bit.ly/2TigqsL">CV</a> |
                       <a href="https://github.com/kumardeepakr3">Github</a> |
                       <a href="https://bit.ly/3gmw1PZ"> LinkedIn </a> | 
                       <a href="https://bit.ly/3gkPzo2"> SO </a>
                     </p>
-                    <p align="center" class="personal">
-                      <a href="https://bit.ly/3iv3KJW">Giving Back</a> |
-                      <a href="https://bit.ly/2TWdlPB"> Gratitude </a>
+                    <p align="center" class="personal extra hidden">
+                      <a href="https://bit.ly/2TWdlPB">Giving Back</a> |
+                      <a href="https://bit.ly/3iv3KJW"> Gratitude </a>
                     </p>
+                    <div style="display: inline-block;">Extracurricular</div>
+                    <div class="tgl" height="10px" style="display: inline-block;margin-left: 6px;/* margin-top: 2px; */vertical-align: inherit;">
+                      <input type="checkbox" onchange='extracurricularClick(this);' id="toggle" style="/* display: inline-block; *//* margin-top: 40px; */">
+                      <label class="tggl" for="toggle" style="display: inline-block;/* margin-top: 2px; *//* padding-top: 19px; */"></label>
+                    </div>
                   </td>
               </tr>
               </tbody>
             </table>
 
 
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
               <tbody><tr><td>
                 <sectionheading>Relevant Projects</sectionheading>
               </td></tr></tbody>
             </table>
 
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
               <tbody><tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/ped.jpg" alt="sym" width="100%" style="border-style: none">
@@ -155,8 +222,7 @@
               </tr></tbody>
             </table>
 
-
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
               <tbody><tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/back.jpg" alt="sym" width="100%" style="border-style: none">
@@ -188,8 +254,7 @@
               </tr></tbody>
             </table>
 
-
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
               <tbody><tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/vocab.jpg" alt="sym" width="100%" style="border-style: none">
@@ -221,8 +286,7 @@
               </tr></tbody>
             </table>
 
-
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
               <tbody><tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/halluc.jpg" alt="sym" width="100%" style="border-style: none">
@@ -255,8 +319,7 @@
               </tr></tbody>
             </table>
 
-
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
               <tbody><tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/bot.jpg" alt="sym" width="100%" style="border-style: none">
@@ -288,8 +351,7 @@
               </tr></tbody>
             </table>
 
-
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
               <tbody><tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/finger.jpg" alt="sym" width="100%" style="border-style: none">
@@ -322,8 +384,7 @@
               </tr></tbody>
             </table>
 
-
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
               <tbody><tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/compiler.jpg" alt="sym" width="100%" style="border-style: none">
@@ -353,8 +414,7 @@
               </tr></tbody>
             </table>
 
-
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
               <tbody><tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/mozart.png" alt="sym" width="100%" style="border-style: none">
@@ -385,8 +445,7 @@
               </tr></tbody>
             </table>
 
-
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
               <tbody><tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/coursein.jpg" alt="sym" width="100%" style="border-style: none">
@@ -418,8 +477,7 @@
               </tr></tbody>
             </table>
 
-
-            <table width="100%" align="center" border="0" cellpadding="20">
+            <table class="acads" width="100%" align="center" border="0" cellpadding="20">
               <tbody><tr><td>
                 <sectionheading>Awards and Achievements</sectionheading>
                 <ol>
@@ -434,11 +492,7 @@
 
 
 
-
-
-
-
-            <table width="100%" align="center" border="0" cellpadding="20">
+            <table class="acads" width="100%" align="center" border="0" cellpadding="20">
               <tbody><tr><td>
                 <sectionheading>MOOCs & other courses</sectionheading>
                 <br> <br>
@@ -512,6 +566,139 @@
               </td></tr></tbody>
             </table>
 
+            <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+              <tbody><tr><td>
+                <sectionheading>Extracurricular activities / Hobbies</sectionheading>
+              </td></tr></tbody>
+            </table>
+
+            <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+              <tbody><tr>
+                <td width="33%" valign="top" align="center">
+                  <img src="./src/images/football.jpg" alt="sym" width="100%" style="border-style: none">
+                </td>
+                <td width="67%" valign="top">
+                  <p>
+                    <heading>Football</heading>
+                    <br>I've been playing football since class 7. I play in defensive positions (left back mostly). I was lucky to be the only student selected from my school to play for U-16 team of Andaman Islands. I've been playing for Microsoft in corporate tournaments since graduation.
+                    <br>
+                  </p>
+                  <p>Here's a small video of me scoring goals (I have a lot more of conceding goals): <a href="https://youtu.be/XWX79GtnevQ?t=15">Strikerz vs Microsoft</a></p>
+                </td>
+              </tr></tbody>
+            </table>
+
+            <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+              <tbody><tr>
+                <td width="33%" valign="top" align="center">
+                  <img src="./src/images/cat.jpg" alt="sym" width="100%" style="border-style: none">
+                </td>
+                <td width="67%" valign="top">
+                  <p>
+                    <heading>Photography</heading>
+                    <br>I purchased the cheapest Canon DSLR available in the market to learn camera handling. I learnt how ISO, Aperture, Shutter speed, White balance etc change the final image captured. I also learnt post processing on Adobe Lightroom.
+                    <br>
+                  </p>
+                  <p>Here are a few photos clicked by me: <a href="https://www.instagram.com/deepak._.photos/">deepak._.photos</a></p>
+                </td>
+              </tr></tbody>
+            </table>
+
+            <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+              <tbody><tr>
+                <td width="33%" valign="top" align="center">
+                  <img src="./src/images/run.jpg" alt="sym" width="100%" style="border-style: none">
+                </td>
+                <td width="67%" valign="top">
+                  <p>
+                    <heading>Running / Strength Training</heading>
+                    <br>I regularly go to Cult.Fit centers. I enjoy doing strength & conditioning and HRX formats. Only after I started going to Cult centres I realized that though I was agile, I wasn't fit.
+                    <br>
+                  </p>
+                  <p><a href="https://www.strava.com/athletes/21182852">Strava</a> &nbsp; &nbsp; <a href="https://www.cult.fit">Cult.Fit</a></p>
+                </td>
+              </tr></tbody>
+            </table>
+
+            <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+              <tbody><tr>
+                <td width="33%" valign="top" align="center">
+                  <img src="./src/images/keyboard.jpg" alt="sym" width="100%" style="border-style: none">
+                </td>
+                <td width="67%" valign="top">
+                  <p>
+                    <heading>Music (Amateur level)</heading>
+                    <br>In 2019 I learnt a bit of western music. I can read sheet music and can differentiate between major third, perfect fifth and octaves just by listening. As for instruments, I started with guitar but gave up within a few months. I'm currently practicing with Keyboard.
+                    <br>
+                  </p>
+                  <p><a href="https://youtu.be/FYWU0FcqFGQ">Nothing else matters (Guitar)</a>   &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://youtu.be/XWX79GtnevQ?t=15">Sadness & Sorrow, Naruto (Keyboard)</a></p>
+                </td>
+              </tr></tbody>
+            </table>
+
+            <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+              <tbody><tr>
+                <td width="33%" valign="top" align="center">
+                  <img src="./src/images/sing.jpg" alt="sym" width="100%" style="border-style: none">
+                </td>
+                <td width="67%" valign="top">
+                  <p>
+                    <heading>Singing (Noob)</heading>
+                    <br>Bathroom singing only. My voice cracks as soon as I go to higher pitches. So I can sing songs which don't have much variations.
+                    <br>
+                  </p>
+                  <p><a href="https://youtu.be/KiUq1WIiqdI">Baawra Mann</a>   &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://youtu.be/OdNlbWJD_ZM">Gulabi aankhein</a></p>
+                </td>
+              </tr></tbody>
+            </table>
+
+            <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+              <tbody><tr>
+                <td width="33%" valign="top" align="center">
+                  <img src="./src/images/dance.jpg" alt="sym" width="100%" style="border-style: none">
+                </td>
+                <td width="67%" valign="top">
+                  <p>
+                    <heading>Dance (Only for fun/cardio)</heading>
+                    <br>I can perform simple steps. However during the lockdown I decided to learn a few shuffle moves. I now have immense respect for people who dance well as it requires proper body strength and heavy coordination b/w body parts. I want to learn salsa in future (need a partner).
+                    <br>
+                  </p>
+                  <p><a href="https://youtu.be/3Qy1_foqzjE?t=279">Office party</a>   &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://youtu.be/OdNlbWJD_ZM">In house shuffle</a></p>
+                </td>
+              </tr></tbody>
+            </table>
+
+            <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+              <tbody><tr>
+                <td width="33%" valign="top" align="center">
+                  <img src="./src/images/ide.jpg" alt="sym" width="100%" style="border-style: none">
+                </td>
+                <td width="67%" valign="top">
+                  <p>
+                    <heading>Video editing (Only for fun)</heading>
+                    <br>I took a course on video editing in my 2nd year of college. I can edit simple videos for now on KDenLive and PremierePro. I know basic transitions and effects. I've applied the learning to create some dumb videos.
+                    <br>
+                  </p>
+                  <p><a href="https://youtu.be/V4heZP1JeyE">Dame Tu Cosita</a>   &nbsp; &nbsp; <a href="https://youtu.be/WVzhnJpbC0Y">Batman X Dhamaal</a>   &nbsp; &nbsp;  <a href="https://youtu.be/Juz3Iefya0c">Snape & Lily</a></p>
+                </td>
+              </tr></tbody>
+            </table>
+
+            <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+              <tbody><tr>
+                <td width="33%" valign="top" align="center">
+                  <img src="./src/images/book.jpg" alt="sym" width="100%" style="border-style: none">
+                </td>
+                <td width="67%" valign="top">
+                  <p>
+                    <heading>Reading</heading>
+                    <br>Whenever I get time and I'm not sleepy at night, I try to pick up a book and read. I'm trying to not just read books but also to understand and apply the ideas within, so I read books at very slow pace. I'm trying to avoid fictions (they're being made into movies anyways).
+                    <br>
+                  </p>
+                  <p><a href="https://www.goodreads.com/kumardeepakr3">GoodReads Account</a></p>
+                </td>
+              </tr></tbody>
+            </table>
 
 
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
