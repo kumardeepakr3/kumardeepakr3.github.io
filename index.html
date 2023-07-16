@@ -1,194 +1,217 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <!-- saved from url=(0076)file:///C:/Users/deku.FAREAST/Documents/deepak%20pathak/Deepak%20Pathak.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="./src/css/main.css" rel="stylesheet">
-    <style type="text/css">
-      /* Design Credits: Jon Barron and Abhishek Kar and Saurabh Gupta*/
-      a {
-        color: #1772d0;
-        text-decoration:none;
-      }
-      a:focus, a:hover {
-        color: #f09228;
-        text-decoration:none;
-      }
-      body,td,th {
-        font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-        font-size: 16px;
-        font-weight: 400
-      }
-      heading {
-        font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-        font-size: 19px;
-        font-weight: 1000
-      }
-      strong {
-        font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-        font-size: 16px;
-        font-weight: 800
-      }
-      strongred {
-        font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-        color: 'red' ;
-        font-size: 16px
-      }
-      sectionheading {
-        font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-        font-size: 22px;
-        font-weight: 600
-      }
-      subheading {
-        font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-        font-size: 18px;
-        font-weight: 600
-      }
-      #cscourses1 {
-        margin-bottom: 0px;
-      }
-      #cscourses2 {
-        margin-top: 0px;
-      }
-      #mooc td {
-        width: 50%;
-      }
-      .tgl input[type=checkbox] {
-          box-sizing: border-box;
-          visibility: hidden;
-          height: inherit;
-          display: none;
-      }
-      label.tggl {
-          box-sizing: border-box;
-          display: flex;
-          width: 48px;
-          height: 23px;
-          border: 4px solid;
-          border-radius: 99em;
-          position: relative;
-          transition: transform 0.75s ease-in-out;
-          transform-origin: 50% 50%;
-          cursor: pointer;
-      }
-      label.tggl:before {
-          transition: transform 0.75s ease;
-          transition-delay: 0.5s;
-          content: "";
-          display: block;
-          position: absolute;
-          width: 11px;
-          height: 11px;
-          background-color: #000;
-          border-radius: 50%;
-          top: 2px;
-          left: 3px;
-      }
-      .tgl input[type=checkbox]:checked + label {
-          transform: rotate(360deg);
-          background-color: #000;
-      }
-      .tgl input[type=checkbox]:checked + label:before {
-          box-sizing: border-box;
-          transform: translateX(24px);
-          background-color: #fff;
-      }
-      .hidden {
-        display:none;
-        transition: 1.2s;
-      }
-    </style>
+<html>
 
-    <title>Deepak Kumar</title>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link href="./src/css/main.css" rel="stylesheet">
+  <style type="text/css">
+    /* Design Credits: Jon Barron and Abhishek Kar and Saurabh Gupta*/
+    a {
+      color: #1772d0;
+      text-decoration: none;
+    }
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97059392-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-97059392-1');
-    </script>
-    <script>
-      function extracurricularClick(checkbox) {
-        var acads = document.querySelectorAll(".acads");
-        var extra = document.querySelectorAll(".extra");
-        if (checkbox.checked == true) {
-            acads.forEach(x => x.classList.add("hidden"));
-            extra.forEach(x => x.classList.remove("hidden"));
-        } else {
-            acads.forEach(x => x.classList.remove("hidden"));
-            extra.forEach(x => x.classList.add("hidden"));
-        }
+    a:focus,
+    a:hover {
+      color: #f09228;
+      text-decoration: none;
+    }
+
+    body,
+    td,
+    th {
+      font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 400
+    }
+
+    heading {
+      font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+      font-size: 19px;
+      font-weight: 1000
+    }
+
+    strong {
+      font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+      font-size: 16px;
+      font-weight: 800
+    }
+
+    strongred {
+      font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+      color: 'red';
+      font-size: 16px
+    }
+
+    sectionheading {
+      font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+      font-size: 22px;
+      font-weight: 600
+    }
+
+    subheading {
+      font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: 600
+    }
+
+    #cscourses1 {
+      margin-bottom: 0px;
+    }
+
+    #cscourses2 {
+      margin-top: 0px;
+    }
+
+    #mooc td {
+      width: 50%;
+    }
+
+    .tgl input[type=checkbox] {
+      box-sizing: border-box;
+      visibility: hidden;
+      height: inherit;
+      display: none;
+    }
+
+    label.tggl {
+      box-sizing: border-box;
+      display: flex;
+      width: 48px;
+      height: 23px;
+      border: 4px solid;
+      border-radius: 99em;
+      position: relative;
+      transition: transform 0.75s ease-in-out;
+      transform-origin: 50% 50%;
+      cursor: pointer;
+    }
+
+    label.tggl:before {
+      transition: transform 0.75s ease;
+      transition-delay: 0.5s;
+      content: "";
+      display: block;
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      background-color: #000;
+      border-radius: 50%;
+      top: 2px;
+      left: 3px;
+    }
+
+    .tgl input[type=checkbox]:checked+label {
+      transform: rotate(360deg);
+      background-color: #000;
+    }
+
+    .tgl input[type=checkbox]:checked+label:before {
+      box-sizing: border-box;
+      transform: translateX(24px);
+      background-color: #fff;
+    }
+
+  </style>
+
+  <title>Deepak Kumar</title>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97059392-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-97059392-1');
+  </script>
+  <script>
+    function extracurricularClick(checkbox) {
+      var acads = document.querySelectorAll(".acads");
+      var extra = document.querySelectorAll(".extra");
+      if (checkbox.checked == true) {
+        acads.forEach(x => x.classList.add("hidden"));
+        extra.forEach(x => x.classList.remove("hidden"));
+      } else {
+        acads.forEach(x => x.classList.remove("hidden"));
+        extra.forEach(x => x.classList.add("hidden"));
       }
-    </script>
+    }
+  </script>
 
-    <meta name="Deepak Kumar&#39;s Github Homepage" http-equiv="Content-Type" content="Deepak Kumar&#39;s Github Homepage">
-    <!-- Scramble Script by Jeff Donahue -->
-    <script src="./src/js/scramble.js"></script>
-    <script src="./src/js/toggleBlock.js"></script>
+  <meta name="Deepak Kumar&#39;s Github Homepage" http-equiv="Content-Type"
+    content="Deepak Kumar&#39;s Github Homepage">
+  <!-- Scramble Script by Jeff Donahue -->
+  <script src="./src/js/scramble.js"></script>
+  <script src="./src/js/toggleBlock.js"></script>
 </head>
 
-  <body>
+<body>
 
-    <table width="840" border="0" align="center" cellspacing="0" cellpadding="20">
-      <tbody>
-        <tr>
-          <td>
+  <table width="840" border="0" align="center" cellspacing="0" cellpadding="20">
+    <tbody>
+      <tr>
+        <td>
 
-            <p align="center"><font size="7">Deepak Kumar</font><br>
-              <b>Email</b>:
-              <font id="email" style="display:inline;">mir.em.@kkcaa3plaudrgome <a href="#" onclick="emailScramble.initAnimatedBubbleSort();return false;">unscramble</a></font>
-              <script>
+          <p align="center">
+            <font size="7">Deepak Kumar</font><br>
+            <b>Email</b>:
+            <font id="email" style="display:inline;">mir.em.@kkcaa3plaudrgome <a href="#"
+                onclick="emailScramble.initAnimatedBubbleSort();return false;">unscramble</a></font>
+            <script>
               emailScramble = new scrambledString(document.getElementById('email'),
-                  'emailScramble', 'le@uegmmkrpakdmi.racao.3',
-                  [20,9,15,2,8,16,3,24,12,5,10,4,1,7,17,19,21,13,11,22,18,23,6,14]);
-              </script>
-            </p>
+                'emailScramble', 'le@uegmmkrpakdmi.racao.3',
+                [20, 9, 15, 2, 8, 16, 3, 24, 12, 5, 10, 4, 1, 7, 17, 19, 21, 13, 11, 22, 18, 23, 6, 14]);
+            </script>
+          </p>
 
 
 
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody>
-                <tr>
-                  <td width="67%" valign="middle" align="justify">
-                    <p class="acads">I am a Software Engineer at <a href="https://google.com/">Google</a>. Prior to this I worked for Microsoft on <a href="https://www.microsoft.com/en-us/edge">Edge</a> browser logging for <a href="https://www.bing.com/">Bing</a> feature enhancement, at Search Technology Center India, Hyderabad.
-                       Before this I worked on <a href="https://www.bing.com/flights?src=HYD&des=NYC&ddate=2021-02-05&isr=1&rdate=2021-02-10&sel=0&cls=0&adult=1&child=0&infant=0&serp=1&setlang=en&setmkt=en-us">flight booking experience on Bing</a>. The experience is shipped in 200 different regions and languages.</p>
-                    <p class="acads">I had also interned at Microsoft in Summer 2015 working on leverageing <a href="https://www.openstreetmap.org/">Openstreetmap</a> for Bing Maps after which I was offered a full time role at Microsoft. Before all this I graduated from <a href="http://www.iitk.ac.in/">IIT Kanpur</a> in 2016 with Bachelors in Computer Science and Engineering. I did most of the projects under <a href="http://www.cse.iitk.ac.in/users/vinaypn/">Prof. Vinay Namboodiri</a> on computer vision. During my time here I also volunteered for NGO <a href="http://www.bloodconnect.org/kanpur-team-2014-15">BloodConnect</a> with a mission to tackle the blood shortage in Kanpur.</p>
-                    <p class="extra hidden">I have plethora of active hobbies that keep me busy post my daily work as a software engineer. I indulge in activities that involve learning & creating and that help widening my skillset. So watching tv series / movies is something I try to avoid.</p>
-                    <p class="extra hidden">I enjoy playing variety of sports especially outdoors. I think I'm good at football and complete novice at badminton, volleyball, basketball, swimming, bowling, pool. I also used to run regularly in the past, but have switched to strength & conditioning and dance fitness at Cult.Fit. Thanks to lockdowns, I was able to hone my photography. I also tried out a few musical instruments and learnt a bit of music theory. Again, I'm just a beginner in all these.</p>
-                    <p class="extra hidden"> </p>
-                    
-                  </td>
-                  <td width="33%">
-                    <img class="acads" src="./src/images/dp.jpg" width="100%">
-                    <img class="extra hidden" src="./src/images/dp2.jpg" width="100%">
-                    <p align="center" class="acads">
-                      <a href="https://bit.ly/3CaPMGy">CV</a> |
-                      <a href="https://github.com/kumardeepakr3">Github</a> |
-                      <a href="https://www.linkedin.com/in/kumardeepakr3/"> LinkedIn </a> | 
-                      <a href="hhttps://stackoverflow.com/users/3946520/kumardeepakr3"> SO </a>
-                    </p>
-                    <p align="center" class="personal extra hidden">
-                      <a href="https://bit.ly/2TWdlPB">Giving Back</a> |
-                      <a href="https://bit.ly/3iv3KJW"> Gratitude </a>
-                    </p>
-                    <div style="display: inline-block;margin-left: 35px;">Extracurricular</div>
-                    <div class="tgl" height="10px" style="display: inline-block;margin-left: 6px;/* margin-top: 2px; */vertical-align: inherit;">
-                      <input type="checkbox" onchange='extracurricularClick(this);' id="toggle" style="/* display: inline-block; *//* margin-top: 40px; */">
-                      <label class="tggl" for="toggle" style="display: inline-block;/* margin-top: 2px; *//* padding-top: 19px; */"></label>
-                    </div>
-                  </td>
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td width="67%" valign="middle" align="justify">
+                  <p class="acads">I am a Software Engineer at <a href="https://google.com/">Google</a>. Prior to this I
+                    worked for Microsoft on <a href="https://www.microsoft.com/en-us/edge">Edge</a> browser logging for
+                    <a href="https://www.bing.com/">Bing</a> feature enhancement, at Search Technology Center India,
+                    Hyderabad.
+                    Before this I worked on <a href="https://www.bing.com/travel/flights/">flight booking experience on
+                      Bing</a>. The experience is shipped in 200 different regions and languages.</p>
+                  <p class="acads">I had also interned at Microsoft in Summer 2015 working on leverageing <a
+                      href="https://www.openstreetmap.org/">Openstreetmap</a> for Bing Maps after which I was offered a
+                    full time role at Microsoft. Before all this I graduated from <a href="http://www.iitk.ac.in/">IIT
+                      Kanpur</a> in 2016 with Bachelors in Computer Science and Engineering. I did most of the projects
+                    under <a href="http://www.cse.iitk.ac.in/users/vinaypn/">Prof. Vinay Namboodiri</a> on computer
+                    vision. During my time here I also volunteered for NGO <a
+                      href="http://www.bloodconnect.org/">BloodConnect</a> with a mission to tackle the blood shortage
+                    in Kanpur.</p>
+                </td>
+                <td width="33%">
+                  <img class="acads" src="./src/images/dp.jpg" width="100%">
+                  <p align="center" class="acads">
+                    <a href="https://bit.ly/3CaPMGy">CV</a> |
+                    <a href="https://github.com/kumardeepakr3">Github</a> |
+                    <a href="https://www.linkedin.com/in/kumardeepakr3/"> LinkedIn </a> |
+                    <a href="hhttps://stackoverflow.com/users/3946520/kumardeepakr3"> SO </a>
+                  </p>
+                </td>
               </tr>
-              </tbody>
-            </table>
+            </tbody>
+          </table>
 
 
-            <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody><tr><td>
-                <sectionheading>Relevant Projects</sectionheading>
-              </td></tr></tbody>
-            </table>
+          <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td>
+                  <sectionheading>Relevant Projects</sectionheading>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-            <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody><tr>
+          <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/ped.jpg" alt="sym" width="100%" style="border-style: none">
                 </td>
@@ -211,19 +234,21 @@
                     <br>
                     <p align="justify">
                       <i id="abs1" style="display: none;">
-                        Finetuned ImageNet pretrained model to adapt to pedestrian detection by 
-                        changing the final CNN innerproduct layer. Used this caffe model to generate 
-                        feature vector corresponding to each bounding box. Trained a LinearSVM for final 
+                        Finetuned ImageNet pretrained model to adapt to pedestrian detection by
+                        changing the final CNN innerproduct layer. Used this caffe model to generate
+                        feature vector corresponding to each bounding box. Trained a LinearSVM for final
                         classification. Obtianed overall precision of 88.2% on INRIA person dataset.
                       </i>
                     </p>
                   </div>
                 </td>
-              </tr></tbody>
-            </table>
+              </tr>
+            </tbody>
+          </table>
 
-            <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody><tr>
+          <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/back.jpg" alt="sym" width="100%" style="border-style: none">
                 </td>
@@ -244,18 +269,22 @@
                     <br>
                     <p align="justify">
                       <i id="abs2" style="display: none;">
-                        Implemented a real-time background-foreground classifier for the surveillance videos of IIT Kanpur. 
-                        Used GoogLeNet pretrained model to generate feature vector for each frame and trained it on LinearSVM. 
-                        Obtained an overall precision of 85% with a processing rate of 220 fps on GPU enabled machine.  
+                        Implemented a real-time background-foreground classifier for the surveillance videos of IIT
+                        Kanpur.
+                        Used GoogLeNet pretrained model to generate feature vector for each frame and trained it on
+                        LinearSVM.
+                        Obtained an overall precision of 85% with a processing rate of 220 fps on GPU enabled machine.
                       </i>
                     </p>
                   </div>
                 </td>
-              </tr></tbody>
-            </table>
+              </tr>
+            </tbody>
+          </table>
 
-            <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody><tr>
+          <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/vocab.jpg" alt="sym" width="100%" style="border-style: none">
                 </td>
@@ -276,18 +305,21 @@
                     <br>
                     <p align="justify">
                       <i id="abs3" style="display: none;">
-                          Created a scalable vocabulary tree for object recognition on UKY dataset. 
-                          Used hierarchical k-Means clustering on SIFT features to create the tree and implemented idf based scoring. 
-                          Evaluated the created vocabulary tree with different branch factors and different depths.
+                        Created a scalable vocabulary tree for object recognition on UKY dataset.
+                        Used hierarchical k-Means clustering on SIFT features to create the tree and implemented idf
+                        based scoring.
+                        Evaluated the created vocabulary tree with different branch factors and different depths.
                       </i>
                     </p>
                   </div>
                 </td>
-              </tr></tbody>
-            </table>
+              </tr>
+            </tbody>
+          </table>
 
-            <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody><tr>
+          <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/halluc.jpg" alt="sym" width="100%" style="border-style: none">
                 </td>
@@ -303,24 +335,29 @@
                   <div class="paper" id="largeScaleCuriosity2018">
                     <a href="javascript:toggleblock(&#39;abs4&#39;)">description</a> |
                     <a href="./src/reports/Hallucination_Poster.pdf">poster</a> |
-                    <a href="https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/shape/msorec/pub/christoudias10eccv.pdf">paper</a>
+                    <a
+                      href="https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/shape/msorec/pub/christoudias10eccv.pdf">paper</a>
                     <br>
                     <br>
                     <p align="justify">
                       <i id="abs4" style="display: none;">
-                        Exploited multiple sources of information for object recognition tasks when additional modalities that are not present 
-                        in the labelled training set are available for inference. 
-                        Predicted the missing data for the labelled examples and exploited all modalities using multiple kernel learning. 
+                        Exploited multiple sources of information for object recognition tasks when additional
+                        modalities that are not present
+                        in the labelled training set are available for inference.
+                        Predicted the missing data for the labelled examples and exploited all modalities using multiple
+                        kernel learning.
                         Performed hallucination to infer the missing modalities in the labelled dataset.
                       </i>
                     </p>
                   </div>
                 </td>
-              </tr></tbody>
-            </table>
+              </tr>
+            </tbody>
+          </table>
 
-            <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody><tr>
+          <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/bot.jpg" alt="sym" width="100%" style="border-style: none">
                 </td>
@@ -340,19 +377,24 @@
                     <br>
                     <p align="justify">
                       <i id="abs5" style="display: none;">
-                          Implemented ‘Air Hockey’ game between two bots (One completely automated, other manually controlled). 
-                          Studied the accuracy in positioning of the automated bot on approach of ball when hit by the manual bot. 
-                          Optimized the positioning of the bot by improving algorithm for ball detection (using overhead camera) and dynamic 
-                          calibration of the rpm of motors.
+                        Implemented ‘Air Hockey’ game between two bots (One completely automated, other manually
+                        controlled).
+                        Studied the accuracy in positioning of the automated bot on approach of ball when hit by the
+                        manual bot.
+                        Optimized the positioning of the bot by improving algorithm for ball detection (using overhead
+                        camera) and dynamic
+                        calibration of the rpm of motors.
                       </i>
                     </p>
                   </div>
                 </td>
-              </tr></tbody>
-            </table>
+              </tr>
+            </tbody>
+          </table>
 
-            <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody><tr>
+          <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/finger.jpg" alt="sym" width="100%" style="border-style: none">
                 </td>
@@ -373,19 +415,24 @@
                     <br>
                     <p align="justify">
                       <i id="abs6" style="display: none;">
-                          Developed a Biometric Fingerprint based attendance system with storage of 200 fingerprints at a time. 
-                          The device could be circulated in a class and the attendance automatically marked in the professor’s PC. Implemented 
-                          python based user-friendly GUI and MySQL based queries for easy extraction of records for each course and individual 
-                          student.
+                        Developed a Biometric Fingerprint based attendance system with storage of 200 fingerprints at a
+                        time.
+                        The device could be circulated in a class and the attendance automatically marked in the
+                        professor’s PC. Implemented
+                        python based user-friendly GUI and MySQL based queries for easy extraction of records for each
+                        course and individual
+                        student.
                       </i>
                     </p>
                   </div>
                 </td>
-              </tr></tbody>
-            </table>
+              </tr>
+            </tbody>
+          </table>
 
-            <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody><tr>
+          <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/compiler.jpg" alt="sym" width="100%" style="border-style: none">
                 </td>
@@ -405,17 +452,21 @@
                     <br>
                     <p align="justify">
                       <i id="abs7" style="display: none;">
-                        Implemented an end to end compiler for Perl in python which generates machine code for x86 architecture. 
-                        Supported data types such as Integers, Strings along with operators, statements, loops and functions (recursive).
+                        Implemented an end to end compiler for Perl in python which generates machine code for x86
+                        architecture.
+                        Supported data types such as Integers, Strings along with operators, statements, loops and
+                        functions (recursive).
                       </i>
                     </p>
                   </div>
                 </td>
-              </tr></tbody>
-            </table>
+              </tr>
+            </tbody>
+          </table>
 
-            <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody><tr>
+          <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/mozart.png" alt="sym" width="100%" style="border-style: none">
                 </td>
@@ -435,18 +486,21 @@
                     <br>
                     <p align="justify">
                       <i id="abs8" style="display: none;">
-                          Implemented a meta circular interpreter for a declarative sequential model for Oz. 
-                          Provided support for unification, record operations and pattern matching, over an abstract implementation of the 
-                          single assignment store and semantic stack using easy-to-parse abstract syntax.
+                        Implemented a meta circular interpreter for a declarative sequential model for Oz.
+                        Provided support for unification, record operations and pattern matching, over an abstract
+                        implementation of the
+                        single assignment store and semantic stack using easy-to-parse abstract syntax.
                       </i>
                     </p>
                   </div>
                 </td>
-              </tr></tbody>
-            </table>
+              </tr>
+            </tbody>
+          </table>
 
-            <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody><tr>
+          <table class="acads" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/coursein.jpg" alt="sym" width="100%" style="border-style: none">
                 </td>
@@ -466,253 +520,378 @@
                     <br>
                     <p align="justify">
                       <i id="abs9" style="display: none;">
-                          Scraped institute’s course data of past 5 years and made it available to the students during pre-registration time. 
-                          Added the list of students who opted for a particular course in a particular year so that one could get to know who to 
-                          contact for a particular course’s content and structure. 
-                          Received ~5000 hits in one week.
+                        Scraped institute’s course data of past 5 years and made it available to the students during
+                        pre-registration time.
+                        Added the list of students who opted for a particular course in a particular year so that one
+                        could get to know who to
+                        contact for a particular course’s content and structure.
+                        Received ~5000 hits in one week.
                       </i>
                     </p>
                   </div>
                 </td>
-              </tr></tbody>
-            </table>
+              </tr>
+            </tbody>
+          </table>
 
-            <table class="acads" width="100%" align="center" border="0" cellpadding="20">
-              <tbody><tr><td>
-                <sectionheading>Awards and Achievements</sectionheading>
-                <ol>
-                  <li> C.S. Venkataraman Memorial Award for Rank 3 in Kerala in RMO 2011.</li>
-                  <li> Among top 30 students in Kerala selected for Indian National Mathematics Olympiad (INMO) 2011.</li>
-                  <li> Dr BR Ambedkar National Merit Award for highest marks in India in CBSE (Science Medical) among eligible candidates (2013).</li>
-                  <li> State Rank 1 in National Science Olympiad 2009 organised by SOF.</li>
-                </ol>
-              </td></tr></tbody>
-            </table>
-
-
-
-
-            <table class="acads" width="100%" align="center" border="0" cellpadding="20">
-              <tbody><tr><td>
-                <sectionheading>MOOCs & other courses</sectionheading>
-                <br> <br>
-                <subheading>Computer Science and Math</subheading>
-
-                <ul id="cscourses1">
-                  <li>Probability Theory, Statistics and Exploratory Data Analysis   <i>(Coursera Jun 2021)</i></li>
-                  <li>The bits and bytes of computer networking   <i>(Coursera Feb 2021)</i></li>
-                  <li>Introduction to Graph Theory   <i>(Coursera Jan 2021)</i></li>
-                  <li>Programming Languages Part C   <i>(Coursera Jan 2021)</i></li>
-                  <li>Programming Languages Part B   <i>(Coursera Dec 2020)</i></li>
-                  <li>Programming Languages Part A   <i>(Coursera Dec 2020)</i></li>
-                  <li>C++ 17: Beyond the basics   <i>(Pluralsight Nov 2020)</i></li>
-                  <li>Accessibility for web design   <i>(Linkedin Learning Oct 2020)</i></li>
-                  <li>Async programming in c#   <i>(Linkedin Learning Oct 2020)</i></li>
-                  <li>C++ Pointers   <i>(Linkedin Learning Oct 2020)</i></li>
-                  <li>Parallel and Concurrent programming with c++ part 1   <i>(Linkedin Learning Oct 2020)</i></li>
-                  <li>Parallel and Concurrent programming with c++ part 2   <i>(Linkedin Learning Oct 2020)</i></li>
-                  <li>npm and Node package manager   <i>(Linkedin Learning Sep 2020)</i></li>
-                  <a href="javascript:toggleblock(&#39;cscourses2&#39;)">--- show more ---</a>
-                </ul>
-                <ul id="cscourses2" style="display: none;">
-                  <li>ASP.NET Core Internationalization Deep Dive   <i>(Pluralsight Aug 2020)</i></li>
-                  <li>C# Delegates, Events and Lambdas   <i>(Linkedin Learning Jun 2020)</i></li>
-                  <li>Azure admin essential training   <i>(Linkedin Learning Apr 2020)</i></li>
-                  <li>UML Mini Course   <i>(Lagunita: Stanford Online Mar 2020)</i></li>
-                  <li>OLAP Mini Course   <i>(Lagunita: Stanford Online Mar 2020)</i></li>
-                  <li>Relational Design Theory   <i>(Lagunita: Stanford Online Feb 2020)</i></li>
-                  <li>Getting started with Git   <i>(Pluralsight Feb 2020)</i></li>
-                  <li>Git: The big picture   <i>(Pluralsight Feb 2020)</i></li>
-                  <li>ASP.NET MVC5 Fundamentals   <i>(Pluralsight Jan 2020)</i></li>
-                  <li>SQL Mini Course   <i>(Lagunita: Stanford Online Nov 2019)</i></li>
-                  <li>ASP.NET Core 3.0: The MVC Request Life Cycle   <i>(Pluralsight Oct 2019)</i></li>
-                  <li>Fibonacci Numbers and the Golden Ratio   <i>(Coursera Oct 2019)</i></li>
-                  <li>Relational Algebra   <i>(Lagunita: Stanford Online Sep 2019)</i></li>
-                  <li>How Git Works   <i>(Pluralsight Jul 2019)</i></li>
-                  <li>Mastering Git   <i>(Pluralsight Jul 2019)</i></li>
-                  <li>Learning Ecmascript 6   <i>(Linkedin Learning Feb 2019)</i></li>
-                  <li>Learning Webpack 1   <i>(Linkedin Learning Feb 2019)</i></li>
-                  <li>Webpack for React Applications   <i>(Linkedin Learning Feb 2019)</i></li>
-                  <li>Learning Redux   <i>(Linkedin Learning Jan 2019)</i></li>
-                  <li>C# Object Oriented Programming Tips and Tricks   <i>(Linkedin Learning Dec 2018)</i></li>
-                  <li>Introduction to Mathematical Thinking   <i>(Coursera Dec 2018)</i></li>
-                  <li>Threading in C#   <i>(Linkedin Learning Jun 2018)</i></li>
-                  <li>Combinatorics and Probability   <i>(Coursera Dec 2017)</i></li>
-                  <li>Mathematical Thinking in Computer Science   <i>(Coursera Dec 2017)</i></li>
-                  <li>Build a Modern Computer from First Principles: From Nand to Tetris (Project-Centered Course)   <i>(Coursera Nov 2017)</i></li>
-                  <li>An Intuitive Introduction to Probability   <i>(Coursera Nov 2017)</i></li>
-                  <li>XML Data   <i>(Lagunita: Stanford Online Oct 2017)</i></li>
-                  <li>JSON Data   <i>(Lagunita: Stanford Online Oct 2017)</i></li>
-                </ul>
+          <table class="acads" width="100%" align="center" border="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td>
+                  <sectionheading>Awards and Achievements</sectionheading>
+                  <ol>
+                    <li> C.S. Venkataraman Memorial Award for Rank 3 in Kerala in RMO 2011.</li>
+                    <li> Among top 30 students in Kerala selected for Indian National Mathematics Olympiad (INMO) 2011.
+                    </li>
+                    <li> Dr BR Ambedkar National Merit Award for highest marks in India in CBSE (Science Medical) among
+                      eligible candidates (2013).</li>
+                    <li> State Rank 1 in National Science Olympiad 2009 organised by SOF.</li>
+                  </ol>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
 
-                <br> 
-                <subheading>Others (Just for knowledge)</subheading>
-                <ul>
-                  <li>Understanding Medical Research   <i>(Coursera Jan 2021)</i></li>
-                  <li>Stanford's short course on breast feeding   <i>(Coursera Jul 2020)</i></li>
-                  <li>Stories of infection   <i>(Coursera June 2020)</i></li>
-                  <li>Photoshop: Adding style to a studio portrait   <i>(Linkedin Learning Jun 2020)</i></li>       
-                  <li>So you think you can tango   <i>(Coursera Mar 2020)</i></li>
-                  <li>Fashion as Design   <i>(Coursera Mar 2020)</i></li>
-                  <li>Learning portrait photography   <i>(Linkedin Learning Jan 2020)</i></li>
-                  <li>Lightroom for faces   <i>(Linkedin Learning Jan 2020)</i></li>
-                  <li>Lightroom: get professional results   <i>(Linkedin Learning Jan 2020)</i></li>
-                  <li>Introduction to Reproduction   <i>(Coursera Jul 2019)</i></li>
-                  <li>Human Trafficking Awareness for the General Public   <i>(Lagunita: Stanford Online Dec 2018)</i></li>
-                  <li>Learning How to Learn: Powerful mental tools to help you master tough subjects   <i>(Coursera Oct 2018)</i></li>
-                  <li>Stanford Introduction to Food and Health   <i>(Coursera Sep 2017)</i></li>
-                </ul>
-              </td></tr></tbody>
-            </table>
 
-            <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody><tr><td>
-                <sectionheading>Extracurricular activities / Hobbies</sectionheading>
-              </td></tr></tbody>
-            </table>
 
-            <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody><tr>
+          <table class="acads" width="100%" align="center" border="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td>
+                  <sectionheading>MOOCs & other courses</sectionheading>
+                  <br> <br>
+                  <subheading>Computer Science and Math</subheading>
+
+                  <ul id="cscourses1">
+                    <li>Probability Theory, Statistics and Exploratory Data Analysis <i>(Coursera Jun 2021)</i></li>
+                    <li>The bits and bytes of computer networking <i>(Coursera Feb 2021)</i></li>
+                    <li>Introduction to Graph Theory <i>(Coursera Jan 2021)</i></li>
+                    <li>Programming Languages Part C <i>(Coursera Jan 2021)</i></li>
+                    <li>Programming Languages Part B <i>(Coursera Dec 2020)</i></li>
+                    <li>Programming Languages Part A <i>(Coursera Dec 2020)</i></li>
+                    <li>C++ 17: Beyond the basics <i>(Pluralsight Nov 2020)</i></li>
+                    <li>Accessibility for web design <i>(Linkedin Learning Oct 2020)</i></li>
+                    <li>Async programming in c# <i>(Linkedin Learning Oct 2020)</i></li>
+                    <li>C++ Pointers <i>(Linkedin Learning Oct 2020)</i></li>
+                    <li>Parallel and Concurrent programming with c++ part 1 <i>(Linkedin Learning Oct 2020)</i></li>
+                    <li>Parallel and Concurrent programming with c++ part 2 <i>(Linkedin Learning Oct 2020)</i></li>
+                    <li>npm and Node package manager <i>(Linkedin Learning Sep 2020)</i></li>
+                    <a href="javascript:toggleblock(&#39;cscourses2&#39;)">--- show more ---</a>
+                  </ul>
+                  <ul id="cscourses2" style="display: none;">
+                    <li>ASP.NET Core Internationalization Deep Dive <i>(Pluralsight Aug 2020)</i></li>
+                    <li>C# Delegates, Events and Lambdas <i>(Linkedin Learning Jun 2020)</i></li>
+                    <li>Azure admin essential training <i>(Linkedin Learning Apr 2020)</i></li>
+                    <li>UML Mini Course <i>(Lagunita: Stanford Online Mar 2020)</i></li>
+                    <li>OLAP Mini Course <i>(Lagunita: Stanford Online Mar 2020)</i></li>
+                    <li>Relational Design Theory <i>(Lagunita: Stanford Online Feb 2020)</i></li>
+                    <li>Getting started with Git <i>(Pluralsight Feb 2020)</i></li>
+                    <li>Git: The big picture <i>(Pluralsight Feb 2020)</i></li>
+                    <li>ASP.NET MVC5 Fundamentals <i>(Pluralsight Jan 2020)</i></li>
+                    <li>SQL Mini Course <i>(Lagunita: Stanford Online Nov 2019)</i></li>
+                    <li>ASP.NET Core 3.0: The MVC Request Life Cycle <i>(Pluralsight Oct 2019)</i></li>
+                    <li>Fibonacci Numbers and the Golden Ratio <i>(Coursera Oct 2019)</i></li>
+                    <li>Relational Algebra <i>(Lagunita: Stanford Online Sep 2019)</i></li>
+                    <li>How Git Works <i>(Pluralsight Jul 2019)</i></li>
+                    <li>Mastering Git <i>(Pluralsight Jul 2019)</i></li>
+                    <li>Learning Ecmascript 6 <i>(Linkedin Learning Feb 2019)</i></li>
+                    <li>Learning Webpack 1 <i>(Linkedin Learning Feb 2019)</i></li>
+                    <li>Webpack for React Applications <i>(Linkedin Learning Feb 2019)</i></li>
+                    <li>Learning Redux <i>(Linkedin Learning Jan 2019)</i></li>
+                    <li>C# Object Oriented Programming Tips and Tricks <i>(Linkedin Learning Dec 2018)</i></li>
+                    <li>Introduction to Mathematical Thinking <i>(Coursera Dec 2018)</i></li>
+                    <li>Threading in C# <i>(Linkedin Learning Jun 2018)</i></li>
+                    <li>Combinatorics and Probability <i>(Coursera Dec 2017)</i></li>
+                    <li>Mathematical Thinking in Computer Science <i>(Coursera Dec 2017)</i></li>
+                    <li>Build a Modern Computer from First Principles: From Nand to Tetris (Project-Centered Course)
+                      <i>(Coursera Nov 2017)</i></li>
+                    <li>An Intuitive Introduction to Probability <i>(Coursera Nov 2017)</i></li>
+                    <li>XML Data <i>(Lagunita: Stanford Online Oct 2017)</i></li>
+                    <li>JSON Data <i>(Lagunita: Stanford Online Oct 2017)</i></li>
+                  </ul>
+
+
+                  <br>
+                  <subheading>Others (Just for knowledge)</subheading>
+                  <ul>
+                    <li>Understanding Medical Research <i>(Coursera Jan 2021)</i></li>
+                    <li>Stanford's short course on breast feeding <i>(Coursera Jul 2020)</i></li>
+                    <li>Stories of infection <i>(Coursera June 2020)</i></li>
+                    <li>Photoshop: Adding style to a studio portrait <i>(Linkedin Learning Jun 2020)</i></li>
+                    <li>So you think you can tango <i>(Coursera Mar 2020)</i></li>
+                    <li>Fashion as Design <i>(Coursera Mar 2020)</i></li>
+                    <li>Learning portrait photography <i>(Linkedin Learning Jan 2020)</i></li>
+                    <li>Lightroom for faces <i>(Linkedin Learning Jan 2020)</i></li>
+                    <li>Lightroom: get professional results <i>(Linkedin Learning Jan 2020)</i></li>
+                    <li>Introduction to Reproduction <i>(Coursera Jul 2019)</i></li>
+                    <li>Human Trafficking Awareness for the General Public <i>(Lagunita: Stanford Online Dec 2018)</i>
+                    </li>
+                    <li>Learning How to Learn: Powerful mental tools to help you master tough subjects <i>(Coursera Oct
+                        2018)</i></li>
+                    <li>Stanford Introduction to Food and Health <i>(Coursera Sep 2017)</i></li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table width="840" border="0" align="center" cellspacing="0" cellpadding="20">
+    <tbody>
+      <tr>
+        <td>
+          <p align="center" style="margin-top: 40px;">
+            <font size="7">Outside 9-5</font><br>
+          </p>
+
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td width="67%" valign="middle" align="justify">
+                  <p class="extra hidden">I have plethora of active hobbies that keep me busy post my daily work as a
+                    software engineer. I indulge in activities that involve learning & creating and that help widening
+                    my skillset. So watching tv series / movies is something I try to avoid.</p>
+                  <p class="extra hidden">I enjoy playing variety of sports especially outdoors. I think I'm good at
+                    football and complete novice at badminton, volleyball, basketball, swimming, bowling, pool. I also
+                    used to run regularly in the past, but have switched to strength & conditioning and dance fitness at
+                    Cult.Fit. Thanks to lockdowns, I was able to hone my photography. I also tried out a few musical
+                    instruments and learnt a bit of music theory. Again, I'm just a beginner in all these.</p>
+                  <p class="extra hidden"> </p>
+
+                </td>
+                <td width="33%">
+                  <img class="extra hidden" src="./src/images/dp2.jpg" width="100%">
+                  <p align="center" class="personal extra hidden">
+                    <a href="https://bit.ly/2TWdlPB">Giving Back</a> |
+                    <a href="https://bit.ly/3iv3KJW"> Gratitude </a>
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td>
+                  <sectionheading>Extracurricular activities / Hobbies</sectionheading>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/football.jpg" alt="sym" width="100%" style="border-style: none">
                 </td>
                 <td width="67%" valign="top">
                   <p>
                     <heading>Football</heading>
-                    <br>I've been playing football since class 7. I play in defensive positions (left back mostly). I was lucky to be selected to play for U-16 team of Andaman Islands. I've been playing for Microsoft in corporate tournaments since graduation.
+                    <br>I've been playing football since class 7. I play in defensive positions (left back mostly). I
+                    was lucky to be selected to play for U-16 team of Andaman Islands. I've been playing for Microsoft
+                    in corporate tournaments since graduation.
                     <br>
                   </p>
-                  <p>Here's a small video of me scoring goals (I have a lot more of conceding goals): <a href="https://youtu.be/XWX79GtnevQ?t=15">Strikerz vs Microsoft</a></p>
+                  <p>Here's a small video of me scoring goals (I have a lot more of conceding goals): <a
+                      href="https://youtu.be/XWX79GtnevQ?t=15">Strikerz vs Microsoft</a></p>
                 </td>
-              </tr></tbody>
-            </table>
+              </tr>
+            </tbody>
+          </table>
 
-            <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody><tr>
+          <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/cat.jpg" alt="sym" width="100%" style="border-style: none">
                 </td>
                 <td width="67%" valign="top">
                   <p>
                     <heading>Photography</heading>
-                    <br>I purchased the cheapest Canon DSLR available in the market to learn camera handling. I learnt how ISO, Aperture, Shutter speed, White balance etc change the final image captured. I also learnt post processing on Adobe Lightroom.
+                    <br>I purchased the cheapest Canon DSLR available in the market to learn camera handling. I learnt
+                    how ISO, Aperture, Shutter speed, White balance etc change the final image captured. I also learnt
+                    post processing on Adobe Lightroom.
                     <br>
                   </p>
-                  <p>Here are a few photos clicked by me: <a href="https://www.instagram.com/deepak._.photos/">deepak._.photos</a></p>
+                  <p>Here are a few photos clicked by me: <a
+                      href="https://www.instagram.com/deepak._.photos/">deepak._.photos</a></p>
                 </td>
-              </tr></tbody>
-            </table>
+              </tr>
+            </tbody>
+          </table>
 
-            <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody><tr>
+          <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/run.jpg" alt="sym" width="100%" style="border-style: none">
                 </td>
                 <td width="67%" valign="top">
                   <p>
                     <heading>Running / Strength Training</heading>
-                    <br>I regularly go to Cult.Fit centers. I enjoy doing strength & conditioning and HRX formats. Only after I started going to Cult centres I realized that though I was agile, I wasn't fit.
+                    <br>I regularly do functional training. Only after I started going to Cult centres I realized that
+                    though I was agile, I wasn't fit. Till before COVID, I also used to run regularly.
                     <br>
                   </p>
-                  <p><a href="https://www.strava.com/athletes/21182852">Strava</a> &nbsp; &nbsp; <a href="https://www.cult.fit">Cult.Fit</a></p>
+                  <p><a href="https://www.strava.com/athletes/21182852">Strava</a> &nbsp; &nbsp;</p>
                 </td>
-              </tr></tbody>
-            </table>
+              </tr>
+            </tbody>
+          </table>
 
-            <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody><tr>
+          <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/book.jpg" alt="sym" width="100%" style="border-style: none">
                 </td>
                 <td width="67%" valign="top">
                   <p>
                     <heading>Reading</heading>
-                    <br>Whenever I get time and I'm not sleepy at night, I try to pick up a book and read. I'm trying to not just read books but also to understand and apply the ideas within, so I read at very slow pace. I'm trying to avoid fictions (they're being made into movies anyways).
+                    <br>Whenever I get time and I'm not sleepy at night, I try to pick up a book and read. I'm trying to
+                    not just read books but also to understand and apply the ideas within, so I read at very slow pace.
+                    I'm trying to avoid fictions (they're being made into movies anyways).
                     <br>
                   </p>
                   <p><a href="https://www.goodreads.com/kumardeepakr3">GoodReads Account</a></p>
                 </td>
-              </tr></tbody>
-            </table>
+              </tr>
+            </tbody>
+          </table>
 
-            <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody><tr>
+          <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/ide.jpg" alt="sym" width="100%" style="border-style: none">
                 </td>
                 <td width="67%" valign="top">
                   <p>
                     <heading>Video editing (Only for fun)</heading>
-                    <br>I took a course on video editing in my 2nd year of college. I can edit simple videos for now on KDenLive and PremierePro. I know basic transitions and effects. I've applied the learning to create some dumb/silly videos.
+                    <br>I took a course on video editing in my 2nd year of college. I can edit simple videos for now on
+                    KDenLive and PremierePro. I know basic transitions and effects. I've applied the learning to create
+                    some dumb/silly videos.
                     <br>
                   </p>
-                  <p><a href="https://youtu.be/V4heZP1JeyE">Dame Tu Cosita</a>   &nbsp; &nbsp; <a href="https://youtu.be/WVzhnJpbC0Y">Batman X Dhamaal</a>   &nbsp; &nbsp;  <a href="https://youtu.be/Juz3Iefya0c">Snape & Lily</a></p>
+                  <p><a href="https://youtu.be/V4heZP1JeyE">Dame Tu Cosita</a> &nbsp; &nbsp; <a
+                      href="https://youtu.be/WVzhnJpbC0Y">Batman X Dhamaal</a> &nbsp; &nbsp; <a
+                      href="https://youtu.be/Juz3Iefya0c">Snape & Lily</a></p>
                 </td>
-              </tr></tbody>
-            </table>
+              </tr>
+            </tbody>
+          </table>
 
-            <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody><tr>
+          <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/keyboard.jpg" alt="sym" width="100%" style="border-style: none">
                 </td>
                 <td width="67%" valign="top">
                   <p>
                     <heading>Music (Amateur level)</heading>
-                    <br>In 2019 I learnt a bit of western music. I can read sheet music and can differentiate between major third, perfect fifth and octaves just by listening. As for instruments, I started with guitar but gave up within a few months. I'm currently practicing with Keyboard.
+                    <br>In 2019 I learnt a bit of western music. As for instruments, I started with guitar but gave up
+                    within a few months. I'm currently practicing with Keyboard.
                     <br>
                   </p>
-                  <p><a href="https://youtu.be/FYWU0FcqFGQ">Nothing else matters (Guitar)</a>   &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://youtu.be/KF14NqevC4c">Sadness & Sorrow, Naruto (Keyboard)</a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://youtu.be/KM_rFlHFyEk">Una Mattina (Keyboard)</a></p>
+                  <p><a href="https://youtu.be/FYWU0FcqFGQ">Nothing else matters (Guitar)</a> &nbsp; &nbsp; &nbsp;
+                    &nbsp; <a href="https://youtu.be/KF14NqevC4c">Sadness & Sorrow, Naruto (Keyboard)</a> &nbsp; &nbsp;
+                    &nbsp; &nbsp; <a href="https://youtu.be/KM_rFlHFyEk">Una Mattina (Keyboard)</a></p>
                 </td>
-              </tr></tbody>
-            </table>
+              </tr>
+            </tbody>
+          </table>
 
-            <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody><tr>
+          <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/sing.jpg" alt="sym" width="100%" style="border-style: none">
                 </td>
                 <td width="67%" valign="top">
                   <p>
                     <heading>Singing (Noob)</heading>
-                    <br>Bathroom singing only. My voice cracks as soon as I go to higher pitches. So I can sing songs which don't have much variations.
+                    <br>Bathroom singing only. My voice cracks as soon as I go to higher pitches. So I can sing songs
+                    which don't have much variations.
                     <br>
                   </p>
-                  <p><a href="https://youtu.be/KiUq1WIiqdI">Baawra Mann</a>   &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://youtu.be/OdNlbWJD_ZM">Gulabi aankhein</a></p>
+                  <p><a href="https://youtu.be/KiUq1WIiqdI">Baawra Mann</a> &nbsp; &nbsp; &nbsp; &nbsp; <a
+                      href="https://youtu.be/OdNlbWJD_ZM">Gulabi aankhein</a></p>
                 </td>
-              </tr></tbody>
-            </table>
+              </tr>
+            </tbody>
+          </table>
 
-            <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-              <tbody><tr>
+          <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
                 <td width="33%" valign="top" align="center">
                   <img src="./src/images/dance.jpg" alt="sym" width="100%" style="border-style: none">
                 </td>
                 <td width="67%" valign="top">
                   <p>
                     <heading>Dance (Only for fun/cardio)</heading>
-                    <br>I can perform simple steps. However during the lockdown I decided to learn a few shuffle moves. I now have immense respect for people who dance well as it requires proper body strength and heavy coordination b/w body parts. I want to learn salsa in future (need a partner).
+                    <br>I can perform simple steps. However during the lockdown I decided to learn a few shuffle moves.
+                    I now have immense respect for people who dance well as it requires proper body strength and heavy
+                    coordination b/w body parts. I want to learn salsa in future (need a partner).
                     <br>
                   </p>
-                  <p><a href="https://youtu.be/3Qy1_foqzjE?t=279">Office party</a>   &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://youtube.com/shorts/h15RctTgOIY">In house shuffle</a></p>
+                  <p><a href="https://youtu.be/3Qy1_foqzjE?t=279">Office party</a> &nbsp; &nbsp; &nbsp; &nbsp; <a
+                      href="https://youtube.com/shorts/h15RctTgOIY">In house shuffle</a></p>
                 </td>
-              </tr></tbody>
-            </table>
+              </tr>
+            </tbody>
+          </table>
+
+          <table class="extra hidden" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td width="33%" valign="top" align="center">
+                  <img src="./src/images/travel.png" alt="sym" width="100%" style="border-style: none">
+                </td>
+                <td width="67%" valign="top">
+                  <p>
+                    <heading>Travel</heading>
+                    <br> I have explored quite a bit of Northern and Southern India. I enjoy the views that new places have to offer (especially beaches and mountains). A lot of these are with friends and sometimes solo. Ping if you want to travel to Central India / North-East India.
+                    <br>
+                  </p>
+                  <p><a href="https://www.google.com/maps/d/u/0/edit?mid=1yw-_479epZIgTUNgTT0WCTbdavZMAsLm&usp=sharing">Places visited</a></p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
 
 
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tbody><tr><td><br><p align="right"><font size="2">
-          Template: <a href="https://people.eecs.berkeley.edu/~pathak/">this</a>, <a href="http://www.cs.berkeley.edu/~barron/">this</a> and <a href="http://www.cs.berkeley.edu/~sgupta/">this</a>
-          </font></p></td></tr>
-      </tbody></table>
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tbody>
+              <tr>
+                <td><br>
+                  <p align="right">
+                    <font size="2">
+                      Template: <a href="https://people.eecs.berkeley.edu/~pathak/">this</a>, <a
+                        href="http://www.cs.berkeley.edu/~barron/">this</a> and <a
+                        href="http://www.cs.berkeley.edu/~sgupta/">this</a>
+                    </font>
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
         </td>
-        </tr>
-      </tbody>
-    </table>
+      </tr>
+    </tbody>
+  </table>
 
 
-  
-</body></html>
+
+</body>
+
+</html>
